@@ -92,6 +92,7 @@
         animation.fromValue = [NSNumber numberWithDouble: defaultValue];
         animation.duration = 5;
         animation.delegate = self;
+		animation.timingFunction = [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionEaseInEaseOut];
         
         [eachLayer addAnimation: animation forKey: @"value"];
     }
