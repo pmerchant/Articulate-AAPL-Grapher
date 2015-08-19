@@ -135,10 +135,6 @@
 
 	if (dataSource)
 	{
-		NSBezierPath*	framePath = [NSBezierPath bezierPathWithRect: self.bounds];
-		
-		[framePath stroke];
-		
 		[self drawXAxis];
 		[self drawYAxis];
 	}
@@ -248,6 +244,7 @@
 	NSBezierPath*	yAxisLine = [NSBezierPath bezierPath];
 	int				eachYValue;
 	double			offset = _yAxisRect.size.height / (_maxValue - _minValue);
+	NSRect			previousLabelRect = NSZeroRect;
 	
 	for (eachYValue = _minValue + 1; eachYValue < _maxValue; eachYValue++)
 	{
@@ -257,7 +254,11 @@
 		
 		eachLabelRect = NSOffsetRect(eachLabelRect, -2, -(eachLabelSize.height / 2));
 		
-		[eachLabel drawInRect: eachLabelRect withAttributes: _labelAttributes];
+		if (! NSIntersectsRect(previousLabelRect, eachLabelRect))	// Don't draw on top of other labels
+		{
+			[eachLabel drawInRect: eachLabelRect withAttributes: _labelAttributes];
+			previousLabelRect = eachLabelRect;
+		}
 		
 		NSBezierPath*	eachLine = [NSBezierPath bezierPath];
 		
@@ -323,13 +324,18 @@
 {
 	NSUInteger	count = [dataSource count];
 	NSUInteger	index;
-
+	NSRect		previousRect = NSZeroRect;
+	
 	for (index = 0; index < count; index++)
 	{
 		NSString*	eachLabel = [dataSource xAxisLabelAtIndex: index];
 		NSRect		eachLabelRect = [self calculateRectForLabel: eachLabel atIndex: index];
 		
-		[eachLabel drawInRect: eachLabelRect withAttributes: _labelAttributes];
+		if (! NSIntersectsRect(previousRect, eachLabelRect))	// Make sure that the labels don't draw on top of each other
+		{
+			[eachLabel drawInRect: eachLabelRect withAttributes: _labelAttributes];
+			previousRect = eachLabelRect;
+		}
 	}
 	
 	NSBezierPath*	xAxisLine = [NSBezierPath bezierPath];
