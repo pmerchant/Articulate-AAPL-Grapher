@@ -28,7 +28,8 @@
 @property (nonatomic, readwrite, assign)	int	maxValue;
 @property (nonatomic, readwrite, strong, setter=setValueColor:)	NSColor* valueColor;
 @property (nonatomic, readwrite, assign, setter=setValueAlpha:) double valueAlpha;
-@property (nonatomic, readwrite, assign) NSFont* labelFont;
+@property (nonatomic, readwrite, weak) NSFont* labelFont;
+@property (nonatomic, readwrite, weak) NSFontDescriptor* labelDescriptor;
 
 - (void) awakeFromNib;
 

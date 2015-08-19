@@ -29,7 +29,7 @@
 - (void) drawXAxis;
 
 - (void) refreshValues;
-- (void) resizeValues: (NSRect) newRect;
+- (void) resizeValues: (CGRect) newRect;
 @end
 
 @implementation GraphView
@@ -130,6 +130,18 @@
 	[self resetGraphView];
 }
 
+- (NSFontDescriptor*) labelDescriptor
+{
+	return [NSFontDescriptor fontDescriptorWithFontAttributes: _labelAttributes];
+}
+
+- (void) setLabelDescriptor: (NSFontDescriptor*) labelDescriptor
+{
+	_labelAttributes = [[labelDescriptor fontAttributes] mutableCopy];
+	
+	[self resetGraphView];
+}
+
 - (void)drawRect: (NSRect) dirtyRect
 {
 	[super drawRect: dirtyRect];
@@ -152,21 +164,28 @@
 {
 	_xAxisRect = [self calculateXAxisRect];
 	_yAxisRect = [self calculateYAxisRect];
-	_xAxisRect = [self calculateXAxisRect];
 	
-	_xAxisOffsets = [NSMutableArray array];
-	for (int index = 0; index < [dataSource count]; index++)
-		[_xAxisOffsets addObject: [NSNumber numberWithDouble: [self calculateXAxisOffsetForIndex: index]]];
+	// Because the start of the X-Axis is based on the width of the Y axis (whose start is based on the height of the
+	// X-Axis), it's easier to just recompute the X-Axis after calculating the Y.
+	_xAxisRect = [self calculateXAxisRect];
 	
 	if (_graphDataView)
 	{
 		NSRect	graphRect = [self calculateGraphRect];
 		
 		[_graphDataView setFrame: graphRect];
-		_graphDataView.layer.frame = graphRect;
-		[self resizeValues: graphRect];
+		
+		CGRect	layerFrameRect = NSRectToCGRect(NSMakeRect(0, 0, graphRect.size.width, graphRect.size.height));
+		
+		_graphDataView.layer.frame = layerFrameRect;
+		[self resizeValues: layerFrameRect];
 		[self refreshValues];
 	}
+
+	_xAxisOffsets = [NSMutableArray array];
+	for (int index = 0; index < [dataSource count]; index++)
+		[_xAxisOffsets addObject: [NSNumber numberWithDouble: [self calculateXAxisOffsetForIndex: index]]];
+
 }
 
 - (NSRect) calculateGraphRect
@@ -342,6 +361,7 @@
 	NSBezierPath*	xAxisLine = [NSBezierPath bezierPath];
 	
 	[xAxisLine setLineWidth: 2.0];
+	[[NSColor blackColor] setStroke];
 	[xAxisLine moveToPoint: NSMakePoint(_yAxisRect.size.width, _xAxisRect.size.height)];
 	[xAxisLine lineToPoint: NSMakePoint(_yAxisRect.size.width + _xAxisRect.size.width, _xAxisRect.size.height)];
 	[xAxisLine stroke];
@@ -413,12 +433,11 @@
 		[eachValueLayer setNeedsDisplay];
 }
 
-- (void) resizeValues: (NSRect) newRect
+- (void) resizeValues: (CGRect) newRect
 {
 	CALayer*	eachValueLayer;
-	CGRect		newFrameRect = NSRectToCGRect(NSMakeRect(0, 0, newRect.size.width, newRect.size.height));
 	
 	for (eachValueLayer in _graphDataView.layer.sublayers)
-		[eachValueLayer setFrame: newFrameRect];
+		[eachValueLayer setFrame: newRect];
 }
 @end

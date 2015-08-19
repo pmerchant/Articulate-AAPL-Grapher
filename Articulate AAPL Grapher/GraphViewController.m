@@ -53,13 +53,27 @@
 
 - (void) fontChanged: (id) sender
 {
-	self.graphView.labelFont = [sender convertFont: [sender selectedFont]];
-	[self.graphView setNeedsDisplay: YES];
+	NSFont*	newFont = [sender convertFont: [sender selectedFont]];
+	
+	if (! [newFont isEqualTo: self.graphView.labelFont])
+	{
+		self.graphView.labelFont = newFont;
+		[self.graphView setNeedsDisplay: YES];
+	}
 }
 
 - (NSUInteger) validModesForFontPanel: (NSFontPanel*) fontPanel
 {
-	return NSFontPanelFaceModeMask | NSFontPanelSizeModeMask | NSFontPanelDocumentColorEffectModeMask;
+	return NSFontPanelFaceModeMask | NSFontPanelSizeModeMask;
 }
 
+- (void) changeAttributes: (id) sender
+{
+	NSDictionary* attrs = [sender convertAttributes: [self.graphView.labelDescriptor fontAttributes]];
+	NSLog(@"orig attrs = %@, attrs = %@", [self.graphView.labelDescriptor fontAttributes], attrs);
+	
+	self.graphView.labelDescriptor = [NSFontDescriptor fontDescriptorWithFontAttributes: attrs];
+	[self.graphView setNeedsDisplay: YES];
+	return;
+}
 @end
