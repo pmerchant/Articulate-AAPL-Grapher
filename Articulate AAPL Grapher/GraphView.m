@@ -56,18 +56,11 @@
 
 	[self setMinMaxFromValues];
 	
-	_xAxisRect = [self calculateXAxisRect];
-	_yAxisRect = [self calculateYAxisRect];
-	_xAxisRect = [self calculateXAxisRect];
-	
-	_xAxisOffsets = [NSMutableArray array];
-	for (index = 0; index < dataSource.count; index++)
-	{
-		[_xAxisOffsets addObject: [NSNumber numberWithDouble: [self calculateXAxisOffsetForIndex: index]]];
-	}
-	
 	if (_graphDataView)
 		[_graphDataView removeFromSuperviewWithoutNeedingDisplay];
+	_graphDataView = NULL;
+	
+	[self resetGraphView];
 	
 	_graphDataView = [[NSView alloc] initWithFrame: [self calculateGraphRect]];
 	[self addSubview: _graphDataView];
@@ -133,19 +126,7 @@
 	[_labelAttributes setObject: newFont forKey: NSFontAttributeName];
 	[self didChangeValueForKey: @"labelFont"];
 	
-	_xAxisRect = [self calculateXAxisRect];
-	_yAxisRect = [self calculateYAxisRect];
-	_xAxisRect = [self calculateXAxisRect];
-	
-	_xAxisOffsets = [NSMutableArray array];
-	for (int index = 0; index < [dataSource count]; index++)
-		[_xAxisOffsets addObject: [NSNumber numberWithDouble: [self calculateXAxisOffsetForIndex: index]]];
-	
-	if (_graphDataView)
-	{
-		[_graphDataView setFrame: [self calculateGraphRect]];
-		[self refreshValues];
-	}
+	[self resetGraphView];
 }
 
 - (void)drawRect: (NSRect) dirtyRect
@@ -165,6 +146,13 @@
 
 - (void) viewDidResize: (NSNotification*) note
 {
+	[self resetGraphView];
+}
+
+#pragma mark -
+
+- (void) resetGraphView
+{
 	_xAxisRect = [self calculateXAxisRect];
 	_yAxisRect = [self calculateYAxisRect];
 	_xAxisRect = [self calculateXAxisRect];
@@ -176,15 +164,13 @@
 	if (_graphDataView)
 	{
 		NSRect	graphRect = [self calculateGraphRect];
-
+		
 		[_graphDataView setFrame: graphRect];
 		_graphDataView.layer.frame = graphRect;
 		[self resizeValues: graphRect];
 		[self refreshValues];
 	}
 }
-
-#pragma mark -
 
 - (NSRect) calculateGraphRect
 {
