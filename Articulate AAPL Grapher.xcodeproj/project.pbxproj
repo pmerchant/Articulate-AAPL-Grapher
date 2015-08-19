@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D00152B81B7C50110035D3CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D00152B71B7C50110035D3CB /* AppDelegate.m */; };
+		D00152BA1B7C50110035D3CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D00152B91B7C50110035D3CB /* main.m */; };
+		D00152BC1B7C50110035D3CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00152BB1B7C50110035D3CB /* Images.xcassets */; };
+		D00152BF1B7C50110035D3CB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00152BD1B7C50110035D3CB /* MainMenu.xib */; };
+		D00152CB1B7C50110035D3CB /* Articulate_AAPL_GrapherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D00152CA1B7C50110035D3CB /* Articulate_AAPL_GrapherTests.m */; };
+		D00152D51B7C58B80035D3CB /* stockprices.json in Resources */ = {isa = PBXBuildFile; fileRef = D00152D41B7C58B80035D3CB /* stockprices.json */; };
+		D00152D61B7C58B80035D3CB /* stockprices.json in Resources */ = {isa = PBXBuildFile; fileRef = D00152D41B7C58B80035D3CB /* stockprices.json */; };
+		D00152DD1B7C70A30035D3CB /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = D00152DC1B7C70A30035D3CB /* GraphView.m */; };
+		D00152DE1B7C70A30035D3CB /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = D00152DC1B7C70A30035D3CB /* GraphView.m */; };
+		D00152E11B7CEF160035D3CB /* StockPrices.m in Sources */ = {isa = PBXBuildFile; fileRef = D00152E01B7CEF160035D3CB /* StockPrices.m */; };
+		D00152E21B7CEF160035D3CB /* StockPrices.m in Sources */ = {isa = PBXBuildFile; fileRef = D00152E01B7CEF160035D3CB /* StockPrices.m */; };
+		D00152E61B80661C0035D3CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00152E51B80661B0035D3CB /* QuartzCore.framework */; };
+		D00152E91B817A320035D3CB /* GraphValueLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D00152E81B817A320035D3CB /* GraphValueLayer.m */; };
+		D0ED1F811B83E737003E6B2F /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1F801B83E737003E6B2F /* GraphViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D00152C51B7C50110035D3CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D00152A91B7C50110035D3CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D00152B01B7C50110035D3CB;
+			remoteInfo = "Articulate AAPL Grapher";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D00152B11B7C50110035D3CB /* Articulate AAPL Grapher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Articulate AAPL Grapher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D00152B51B7C50110035D3CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D00152B61B7C50110035D3CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D00152B71B7C50110035D3CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D00152B91B7C50110035D3CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D00152BB1B7C50110035D3CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D00152BE1B7C50110035D3CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D00152C41B7C50110035D3CB /* Articulate AAPL GrapherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Articulate AAPL GrapherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D00152C91B7C50110035D3CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D00152CA1B7C50110035D3CB /* Articulate_AAPL_GrapherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Articulate_AAPL_GrapherTests.m; sourceTree = "<group>"; };
+		D00152D41B7C58B80035D3CB /* stockprices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stockprices.json; sourceTree = "<group>"; };
+		D00152D71B7C6D830035D3CB /* GraphDataSourceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphDataSourceProtocol.h; sourceTree = "<group>"; };
+		D00152DB1B7C70A30035D3CB /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
+		D00152DC1B7C70A30035D3CB /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
+		D00152DF1B7CEF160035D3CB /* StockPrices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockPrices.h; sourceTree = "<group>"; };
+		D00152E01B7CEF160035D3CB /* StockPrices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockPrices.m; sourceTree = "<group>"; };
+		D00152E51B80661B0035D3CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D00152E71B817A320035D3CB /* GraphValueLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphValueLayer.h; sourceTree = "<group>"; };
+		D00152E81B817A320035D3CB /* GraphValueLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphValueLayer.m; sourceTree = "<group>"; };
+		D0ED1F7F1B83E737003E6B2F /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		D0ED1F801B83E737003E6B2F /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D00152AE1B7C50110035D3CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00152E61B80661C0035D3CB /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00152C11B7C50110035D3CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D00152A81B7C50110035D3CB = {
+			isa = PBXGroup;
+			children = (
+				D00152E51B80661B0035D3CB /* QuartzCore.framework */,
+				D00152B31B7C50110035D3CB /* Articulate AAPL Grapher */,
+				D00152C71B7C50110035D3CB /* Articulate AAPL GrapherTests */,
+				D00152B21B7C50110035D3CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D00152B21B7C50110035D3CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D00152B11B7C50110035D3CB /* Articulate AAPL Grapher.app */,
+				D00152C41B7C50110035D3CB /* Articulate AAPL GrapherTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D00152B31B7C50110035D3CB /* Articulate AAPL Grapher */ = {
+			isa = PBXGroup;
+			children = (
+				D00152B61B7C50110035D3CB /* AppDelegate.h */,
+				D00152B71B7C50110035D3CB /* AppDelegate.m */,
+				D0ED1F7F1B83E737003E6B2F /* GraphViewController.h */,
+				D0ED1F801B83E737003E6B2F /* GraphViewController.m */,
+				D00152DB1B7C70A30035D3CB /* GraphView.h */,
+				D00152DC1B7C70A30035D3CB /* GraphView.m */,
+				D00152E71B817A320035D3CB /* GraphValueLayer.h */,
+				D00152E81B817A320035D3CB /* GraphValueLayer.m */,
+				D00152DF1B7CEF160035D3CB /* StockPrices.h */,
+				D00152E01B7CEF160035D3CB /* StockPrices.m */,
+				D00152D71B7C6D830035D3CB /* GraphDataSourceProtocol.h */,
+				D00152BB1B7C50110035D3CB /* Images.xcassets */,
+				D00152BD1B7C50110035D3CB /* MainMenu.xib */,
+				D00152D41B7C58B80035D3CB /* stockprices.json */,
+				D00152B41B7C50110035D3CB /* Supporting Files */,
+			);
+			path = "Articulate AAPL Grapher";
+			sourceTree = "<group>";
+		};
+		D00152B41B7C50110035D3CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D00152B51B7C50110035D3CB /* Info.plist */,
+				D00152B91B7C50110035D3CB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D00152C71B7C50110035D3CB /* Articulate AAPL GrapherTests */ = {
+			isa = PBXGroup;
+			children = (
+				D00152CA1B7C50110035D3CB /* Articulate_AAPL_GrapherTests.m */,
+				D00152C81B7C50110035D3CB /* Supporting Files */,
+			);
+			path = "Articulate AAPL GrapherTests";
+			sourceTree = "<group>";
+		};
+		D00152C81B7C50110035D3CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D00152C91B7C50110035D3CB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D00152B01B7C50110035D3CB /* Articulate AAPL Grapher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D00152CE1B7C50110035D3CB /* Build configuration list for PBXNativeTarget "Articulate AAPL Grapher" */;
+			buildPhases = (
+				D00152AD1B7C50110035D3CB /* Sources */,
+				D00152AE1B7C50110035D3CB /* Frameworks */,
+				D00152AF1B7C50110035D3CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Articulate AAPL Grapher";
+			productName = "Articulate AAPL Grapher";
+			productReference = D00152B11B7C50110035D3CB /* Articulate AAPL Grapher.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D00152C31B7C50110035D3CB /* Articulate AAPL GrapherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D00152D11B7C50110035D3CB /* Build configuration list for PBXNativeTarget "Articulate AAPL GrapherTests" */;
+			buildPhases = (
+				D00152C01B7C50110035D3CB /* Sources */,
+				D00152C11B7C50110035D3CB /* Frameworks */,
+				D00152C21B7C50110035D3CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D00152C61B7C50110035D3CB /* PBXTargetDependency */,
+			);
+			name = "Articulate AAPL GrapherTests";
+			productName = "Articulate AAPL GrapherTests";
+			productReference = D00152C41B7C50110035D3CB /* Articulate AAPL GrapherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D00152A91B7C50110035D3CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Peter Merchant";
+				TargetAttributes = {
+					D00152B01B7C50110035D3CB = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					D00152C31B7C50110035D3CB = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = D00152B01B7C50110035D3CB;
+					};
+				};
+			};
+			buildConfigurationList = D00152AC1B7C50110035D3CB /* Build configuration list for PBXProject "Articulate AAPL Grapher" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D00152A81B7C50110035D3CB;
+			productRefGroup = D00152B21B7C50110035D3CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D00152B01B7C50110035D3CB /* Articulate AAPL Grapher */,
+				D00152C31B7C50110035D3CB /* Articulate AAPL GrapherTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D00152AF1B7C50110035D3CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00152BC1B7C50110035D3CB /* Images.xcassets in Resources */,
+				D00152D51B7C58B80035D3CB /* stockprices.json in Resources */,
+				D00152BF1B7C50110035D3CB /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00152C21B7C50110035D3CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00152D61B7C58B80035D3CB /* stockprices.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D00152AD1B7C50110035D3CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00152DD1B7C70A30035D3CB /* GraphView.m in Sources */,
+				D00152E91B817A320035D3CB /* GraphValueLayer.m in Sources */,
+				D00152BA1B7C50110035D3CB /* main.m in Sources */,
+				D00152E11B7CEF160035D3CB /* StockPrices.m in Sources */,
+				D00152B81B7C50110035D3CB /* AppDelegate.m in Sources */,
+				D0ED1F811B83E737003E6B2F /* GraphViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00152C01B7C50110035D3CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00152E21B7CEF160035D3CB /* StockPrices.m in Sources */,
+				D00152CB1B7C50110035D3CB /* Articulate_AAPL_GrapherTests.m in Sources */,
+				D00152DE1B7C70A30035D3CB /* GraphView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D00152C61B7C50110035D3CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D00152B01B7C50110035D3CB /* Articulate AAPL Grapher */;
+			targetProxy = D00152C51B7C50110035D3CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D00152BD1B7C50110035D3CB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D00152BE1B7C50110035D3CB /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D00152CC1B7C50110035D3CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D00152CD1B7C50110035D3CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D00152CF1B7C50110035D3CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Articulate AAPL Grapher/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D00152D01B7C50110035D3CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Articulate AAPL Grapher/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D00152D21B7C50110035D3CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Articulate AAPL GrapherTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Articulate AAPL Grapher.app/Contents/MacOS/Articulate AAPL Grapher";
+			};
+			name = Debug;
+		};
+		D00152D31B7C50110035D3CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Articulate AAPL GrapherTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Articulate AAPL Grapher.app/Contents/MacOS/Articulate AAPL Grapher";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D00152AC1B7C50110035D3CB /* Build configuration list for PBXProject "Articulate AAPL Grapher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D00152CC1B7C50110035D3CB /* Debug */,
+				D00152CD1B7C50110035D3CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D00152CE1B7C50110035D3CB /* Build configuration list for PBXNativeTarget "Articulate AAPL Grapher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D00152CF1B7C50110035D3CB /* Debug */,
+				D00152D01B7C50110035D3CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D00152D11B7C50110035D3CB /* Build configuration list for PBXNativeTarget "Articulate AAPL GrapherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D00152D21B7C50110035D3CB /* Debug */,
+				D00152D31B7C50110035D3CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D00152A91B7C50110035D3CB /* Project object */;
+}
