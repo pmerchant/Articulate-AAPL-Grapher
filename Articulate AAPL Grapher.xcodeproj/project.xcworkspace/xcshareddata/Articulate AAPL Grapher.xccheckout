@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0FC44DC0-018F-4C43-852E-0AEAF3E87342</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3BC47D70DD1A7C694FD5BC6E92655A4F1E8A65F1</key>
+		<string>https://github.com/pmerchant/Articulate-AAPL-Grapher.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Articulate AAPL Grapher.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3BC47D70DD1A7C694FD5BC6E92655A4F1E8A65F1</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/pmerchant/Articulate-AAPL-Grapher.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3BC47D70DD1A7C694FD5BC6E92655A4F1E8A65F1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3BC47D70DD1A7C694FD5BC6E92655A4F1E8A65F1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Articulate%20AAPL%20Grapher</string>
+		</dict>
+	</array>
+</dict>
+</plist>

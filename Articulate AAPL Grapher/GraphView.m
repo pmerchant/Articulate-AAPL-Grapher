@@ -374,8 +374,8 @@
 	if ([layer isMemberOfClass: [GraphValueLayer class]])
 	{
 		GraphValueLayer*	gvLayer = (GraphValueLayer*)layer;
-		
-		CGPathRef	path = [self graphPathForDataValue: gvLayer.value atIndex: gvLayer.dataIndex];
+		CGPathRef			path = [self graphPathForDataValue: gvLayer.value atIndex: gvLayer.dataIndex];
+
 		CGContextSaveGState(context);
 
 		CGContextAddPath(context, path);
@@ -385,7 +385,7 @@
 		CGPathRelease(path);
 
 		CGContextRestoreGState(context);
-        
+		
         [_graphDataView.layer setNeedsDisplay];
 	}
     else if ([layer.name isEqualToString: @"Line Layer"])
@@ -399,14 +399,14 @@
             {
                 GraphValueLayer*    presentationLayer = eachLayer.presentationLayer;
                 CGPoint     valuePt = [self graphPointForDataValue: presentationLayer.value atIndex: presentationLayer.dataIndex];
-                
-                if (! linePath)
-                    linePath = CGPathCreateMutable();
-                
-                if (presentationLayer.dataIndex == 0)
-                    CGPathMoveToPoint(linePath, NULL, valuePt.x, valuePt.y);
-                else
-                    CGPathAddLineToPoint(linePath, NULL, valuePt.x, valuePt.y);
+				
+				if (! linePath)
+					linePath = CGPathCreateMutable();
+				
+				if (presentationLayer.dataIndex == 0)
+					CGPathMoveToPoint(linePath, NULL, valuePt.x, valuePt.y);
+				else
+					CGPathAddLineToPoint(linePath, NULL, valuePt.x, valuePt.y);
             }
         }
         
